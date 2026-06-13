@@ -59,6 +59,30 @@
   const PIECE_TYPES = ['I', 'O', 'T', 'S', 'Z', 'J', 'L'];
   const LINE_SCORES = [0, 100, 300, 500, 800];
   const CLEAR_ANIM_MS = 400;
+  const THEME_KEY = 'mario-tetris-theme';
+
+  const CANVAS_THEMES = {
+    light: {
+      boardBg: '#1a1a2e',
+      gridLine: '#2a2a4e',
+      nextBg: '#1a1a2e',
+      ghostStroke: 'rgba(255,255,255,0.25)',
+      flashBright: '#ffffff',
+      flashWarm: '#fcba03',
+      brick: { main: '#8b4513', light: '#a0522d', dark: '#5c2e0a', inner: '#cd853f' },
+      brickLine: '#5c2e0a',
+    },
+    dark: {
+      boardBg: '#060610',
+      gridLine: '#12122a',
+      nextBg: '#060610',
+      ghostStroke: 'rgba(180,170,255,0.22)',
+      flashBright: '#aaaaff',
+      flashWarm: '#8866ff',
+      brick: { main: '#443366', light: '#665588', dark: '#221144', inner: '#554477' },
+      brickLine: '#221144',
+    },
+  };
 
   /* ── DOM ── */
   const canvas = document.getElementById('gameCanvas');
@@ -72,6 +96,9 @@
   const overlayTitle = document.getElementById('overlayTitle');
   const overlayMessage = document.getElementById('overlayMessage');
   const pauseBanner = document.getElementById('pauseBanner');
+  const themeToggle = document.getElementById('themeToggle');
+  const themeToggleIcon = themeToggle.querySelector('.theme-toggle-icon');
+  const themeToggleLabel = themeToggle.querySelector('.theme-toggle-label');
 
   canvas.width = CANVAS_W;
   canvas.height = CANVAS_H;
@@ -417,6 +444,38 @@
     drawNext();
   }
 
+  function getTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  function getCanvasTheme() {
+    return CANVAS_THEMES[getTheme()];
+  }
+
+  function updateThemeUI(theme) {
+    const isDark = theme === 'dark';
+    themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    themeToggleIcon.textContent = isDark ? '☾' : '☀';
+    themeToggleLabel.textContent = isDark ? 'LIGHT' : 'DARK';
+  }
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+    updateThemeUI(theme);
+    drawNext();
+    render();
+  }
+
+  function toggleTheme() {
+    setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    setTheme(saved === 'dark' ? 'dark' : 'light');
+  }
+
   /* ── Drawing ── */
   function drawPixelBlock(context, px, py, size, palette) {
     const s = size;
@@ -445,8 +504,9 @@
   }
 
   function drawBrickBlock(context, px, py, size) {
-    drawPixelBlock(context, px, py, size, COLORS.brick);
-    context.fillStyle = '#5c2e0a';
+    const ct = getCanvasTheme();
+    drawPixelBlock(context, px, py, size, ct.brick);
+    context.fillStyle = ct.brickLine;
     context.fillRect(px + 4, py + 8, size - 8, 2);
     context.fillRect(px + 4, py + 18, size - 8, 2);
   }
@@ -454,11 +514,12 @@
   function drawBoardBackground() {
     const ox = BORDER * CELL;
     const oy = BORDER * CELL;
+    const ct = getCanvasTheme();
 
-    ctx.fillStyle = '#1a1a2e';
+    ctx.fillStyle = ct.boardBg;
     ctx.fillRect(ox, oy, COLS * CELL, ROWS * CELL);
 
-    ctx.strokeStyle = '#2a2a4e';
+    ctx.strokeStyle = ct.gridLine;
     ctx.lineWidth = 1;
     for (let c = 0; c <= COLS; c++) {
       ctx.beginPath();
@@ -494,8 +555,9 @@
     const oy = (BORDER + row) * CELL;
 
     if (flash) {
+      const ct = getCanvasTheme();
       const phase = state.clearPhase % 2;
-      ctx.fillStyle = phase ? '#fff' : '#fcba03';
+      ctx.fillStyle = phase ? ct.flashBright : ct.flashWarm;
       ctx.fillRect(ox + 1, oy + 1, CELL - 2, CELL - 2);
       return;
     }
@@ -521,7 +583,7 @@
         if (row < 0) continue;
         const ox = (BORDER + col) * CELL;
         const oy = (BORDER + row) * CELL;
-        ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+        ctx.strokeStyle = getCanvasTheme().ghostStroke;
         ctx.lineWidth = 2;
         ctx.strokeRect(ox + 3, oy + 3, CELL - 6, CELL - 6);
       }
@@ -552,7 +614,8 @@
   }
 
   function drawNext() {
-    nextCtx.fillStyle = '#1a1a2e';
+    const ct = getCanvasTheme();
+    nextCtx.fillStyle = ct.nextBg;
     nextCtx.fillRect(0, 0, nextCanvas.width, nextCanvas.height);
 
     const shape = getShape(state.nextType, 0);
@@ -669,7 +732,10 @@
   window.addEventListener('resize', scaleCanvas);
   scaleCanvas();
 
+  themeToggle.addEventListener('click', toggleTheme);
+
   /* ── Init ── */
+  initTheme();
   overlayTitle.textContent = 'MARIO TETRIS';
   overlayMessage.textContent = 'PRESS ANY KEY TO START';
   overlay.classList.remove('hidden');

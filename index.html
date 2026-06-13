@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mario Tetris — 8-Bit</title>
+  <script>
+    (function () {
+      if (localStorage.getItem('mario-tetris-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -27,6 +34,11 @@
       <div class="hill hill-back"></div>
       <div class="hill hill-front"></div>
     </div>
+
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить светлую и тёмную тему" aria-pressed="false">
+      <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+      <span class="theme-toggle-label">DARK</span>
+    </button>
 
     <main class="game-wrapper">
       <h1 class="title">MARIO TETRIS</h1>
