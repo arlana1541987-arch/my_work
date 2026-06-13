@@ -245,7 +245,24 @@
 
   function getShape(type, rot) {
     const shapes = SHAPES[type];
+    if (!shapes || !shapes.length) return [[0]];
     return shapes[rot % shapes.length];
+  }
+
+  function storageGet(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function storageSet(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (err) {
+      /* file:// or private mode */
+    }
   }
 
   function collides(shape, x, y, board) {
@@ -461,9 +478,9 @@
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem(THEME_KEY, theme);
+    storageSet(THEME_KEY, theme);
     updateThemeUI(theme);
-    drawNext();
+    if (state.nextType) drawNext();
     render();
   }
 
@@ -472,7 +489,7 @@
   }
 
   function initTheme() {
-    const saved = localStorage.getItem(THEME_KEY);
+    const saved = storageGet(THEME_KEY);
     setTheme(saved === 'dark' ? 'dark' : 'light');
   }
 
@@ -618,6 +635,8 @@
     nextCtx.fillStyle = ct.nextBg;
     nextCtx.fillRect(0, 0, nextCanvas.width, nextCanvas.height);
 
+    if (!state.nextType) return;
+
     const shape = getShape(state.nextType, 0);
     const blockSize = 24;
     const offsetX = Math.floor((nextCanvas.width - shape[0].length * blockSize) / 2);
@@ -669,10 +688,15 @@
 
     if (state.started) {
       update(dt);
-      render();
     }
+    render();
 
     requestAnimationFrame(gameLoop);
+  }
+
+  function startGame() {
+    if (state.started && !state.gameOver) return;
+    resetGame();
   }
 
   /* ── Input ── */
@@ -684,7 +708,8 @@
     Audio.ensure();
 
     if (!state.started && e.key !== 'r' && e.key !== 'R') {
-      resetGame();
+      startGame();
+      return;
     }
 
     if (e.key === 'r' || e.key === 'R') {
@@ -733,11 +758,13 @@
   scaleCanvas();
 
   themeToggle.addEventListener('click', toggleTheme);
+  overlay.addEventListener('click', startGame);
 
   /* ── Init ── */
+  state.nextType = randomType();
   initTheme();
   overlayTitle.textContent = 'MARIO TETRIS';
-  overlayMessage.textContent = 'PRESS ANY KEY TO START';
+  overlayMessage.textContent = 'CLICK OR PRESS ANY KEY';
   overlay.classList.remove('hidden');
 
   drawNext();

@@ -6,8 +6,12 @@
   <title>Mario Tetris — 8-Bit</title>
   <script>
     (function () {
-      if (localStorage.getItem('mario-tetris-theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
+      try {
+        if (localStorage.getItem('mario-tetris-theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (err) {
+        /* localStorage unavailable (file:// in some browsers) */
       }
     })();
   </script>
