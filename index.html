@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Tetris — 8-Bit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+
+    <div class="deco pipe pipe-left"></div>
+    <div class="deco pipe pipe-right"></div>
+    <div class="deco question-block q1"></div>
+    <div class="deco question-block q2"></div>
+    <div class="deco bush bush-1"></div>
+    <div class="deco bush bush-2"></div>
+
+    <div class="hills">
+      <div class="hill hill-back"></div>
+      <div class="hill hill-front"></div>
+    </div>
+
+    <main class="game-wrapper">
+      <h1 class="title">MARIO TETRIS</h1>
+
+      <div class="game-container">
+        <canvas id="gameCanvas" width="360" height="660" aria-label="Игровое поле Тетрис"></canvas>
+
+        <aside class="panel">
+          <div class="panel-block">
+            <h2>NEXT</h2>
+            <canvas id="nextCanvas" width="120" height="120"></canvas>
+          </div>
+
+          <div class="panel-block">
+            <h2>SCORE</h2>
+            <p id="scoreDisplay" class="stat-value">0</p>
+          </div>
+
+          <div class="panel-block">
+            <h2>LEVEL</h2>
+            <p id="levelDisplay" class="stat-value">1</p>
+          </div>
+
+          <div class="panel-block">
+            <h2>LINES</h2>
+            <p id="linesDisplay" class="stat-value">0</p>
+          </div>
+
+          <div class="controls-info">
+            <p>← → MOVE</p>
+            <p>↓ SOFT DROP</p>
+            <p>↑ / X ROTATE</p>
+            <p>SPACE HARD DROP</p>
+            <p>P PAUSE</p>
+            <p>R RESTART</p>
+          </div>
+        </aside>
+      </div>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-box">
+          <p id="overlayTitle" class="overlay-title">GAME OVER</p>
+          <p id="overlayMessage" class="overlay-message">SCORE: 0</p>
+          <p class="overlay-hint">PRESS R TO RESTART</p>
+        </div>
+      </div>
+
+      <div id="pauseBanner" class="pause-banner hidden">PAUSED</div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
