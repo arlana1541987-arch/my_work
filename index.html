@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Профессиональный чип-тюнинг автомобилей в Санкт-Петербурге. Увеличение мощности до +35%, экономия топлива, гарантия и бесплатная диагностика.">
+  <meta name="keywords" content="чип-тюнинг, прошивка ЭБУ, Stage 1, Stage 2, чип-тюнинг СПб">
+  <meta property="og:title" content="VeloxChip — Чип-тюнинг премиум-класса">
+  <meta property="og:description" content="Безопасные калибровки, лицензированное оборудование, более 3200 автомобилей.">
+  <meta property="og:type" content="website">
+  <title>VeloxChip — Чип-тюнинг автомобилей | Санкт-Петербург</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Unbounded:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fixed action buttons -->
+  <a href="tel:+78121234567" class="fab fab--call" aria-label="Позвонить">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span>Позвонить</span>
+  </a>
+  <a href="#contacts" class="fab fab--book" aria-label="Записаться">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Записаться</span>
+  </a>
+
+  <!-- Navbar -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark">V</span>
+        <span class="logo__text">Velox<em>Chip</em></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#selector">Подбор</a></li>
+          <li><a href="#advantages">О нас</a></li>
+          <li><a href="#works">Работы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacts" class="nav__cta">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Главный экран">
+      <div class="hero__bg">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--red"></div>
+        <div class="hero__glow hero__glow--white"></div>
+        <div class="hero__noise"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__tag">Чип-тюнинг премиум-класса · Санкт-Петербург</p>
+          <h1 class="hero__title">Раскройте потенциал<br>вашего <span class="text-accent">двигателя</span></h1>
+          <p class="hero__desc">Безопасные калибровки на лицензированном оборудовании. Индивидуальный подход, гарантия результата и бесплатная диагностика перед началом работ.</p>
+          <div class="hero__actions">
+            <a href="#selector" class="btn btn--primary">Подобрать прошивку</a>
+            <a href="#contacts" class="btn btn--ghost">Записаться</a>
+          </div>
+          <ul class="hero__benefits">
+            <li><span class="check">✔</span> До +35% мощности</li>
+            <li><span class="check">✔</span> До +20% экономии топлива</li>
+            <li><span class="check">✔</span> Гарантия на работы</li>
+            <li><span class="check">✔</span> Бесплатная диагностика</li>
+          </ul>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__car-frame">
+            <div class="hero__car-glow"></div>
+            <svg class="hero__car" viewBox="0 0 600 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="carGrad" x1="0" y1="0" x2="600" y2="280">
+                  <stop offset="0%" stop-color="#2a2a2e"/>
+                  <stop offset="50%" stop-color="#1a1a1e"/>
+                  <stop offset="100%" stop-color="#0d0d10"/>
+                </linearGradient>
+                <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e63946"/>
+                  <stop offset="100%" stop-color="#9d0208"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="300" cy="240" rx="220" ry="20" fill="rgba(230,57,70,0.15)"/>
+              <path d="M80 180 Q120 120 200 110 L400 105 Q480 108 520 160 L540 180 L80 180Z" fill="url(#carGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+              <path d="M200 110 L280 80 L380 78 L460 100 L400 105 L200 110Z" fill="#252528" stroke="rgba(255,255,255,0.06)"/>
+              <rect x="290" y="82" width="60" height="4" rx="2" fill="url(#accentGrad)" opacity="0.8"/>
+              <circle cx="180" cy="185" r="38" fill="#111" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+              <circle cx="180" cy="185" r="22" fill="#1a1a1e" stroke="url(#accentGrad)" stroke-width="2"/>
+              <circle cx="420" cy="185" r="38" fill="#111" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+              <circle cx="420" cy="185" r="22" fill="#1a1a1e" stroke="url(#accentGrad)" stroke-width="2"/>
+              <path d="M520 160 L560 155 L570 175 L540 180Z" fill="#e63946" opacity="0.6"/>
+              <line x1="100" y1="175" x2="500" y2="170" stroke="url(#accentGrad)" stroke-width="1" opacity="0.3"/>
+            </svg>
+            <div class="hero__stat hero__stat--power">
+              <span class="hero__stat-value">+35%</span>
+              <span class="hero__stat-label">мощность</span>
+            </div>
+            <div class="hero__stat hero__stat--torque">
+              <span class="hero__stat-value">+28%</span>
+              <span class="hero__stat-label">момент</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Листайте</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Car Selector -->
+    <section class="section selector" id="selector">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Каталог</span>
+          <h2 class="section__title">Подберите прошивку<br>для вашего авто</h2>
+          <p class="section__desc">Выберите марку, модель, поколение и двигатель — мы покажем доступные калибровки и прирост характеристик.</p>
+        </div>
+        <div class="selector__card glass">
+          <div class="selector__steps">
+            <span class="selector__step active">1. Марка</span>
+            <span class="selector__arrow">→</span>
+            <span class="selector__step">2. Модель</span>
+            <span class="selector__arrow">→</span>
+            <span class="selector__step">3. Поколение</span>
+            <span class="selector__arrow">→</span>
+            <span class="selector__step">4. Двигатель</span>
+          </div>
+          <form class="selector__form" action="#" method="get">
+            <div class="selector__grid">
+              <div class="form-group">
+                <label for="brand">Марка</label>
+                <select id="brand" name="brand">
+                  <option value="">Выберите марку</option>
+                  <option value="audi">Audi</option>
+                  <option value="bmw">BMW</option>
+                  <option value="mercedes">Mercedes-Benz</option>
+                  <option value="volkswagen">Volkswagen</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="ford">Ford</option>
+                  <option value="kia">Kia</option>
+                  <option value="hyundai">Hyundai</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="model">Модель</label>
+                <select id="model" name="model">
+                  <option value="">Выберите модель</option>
+                  <option value="x5">X5</option>
+                  <option value="x3">X3</option>
+                  <option value="3series">3 Series</option>
+                  <option value="5series">5 Series</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="generation">Поколение</label>
+                <select id="generation" name="generation">
+                  <option value="">Выберите поколение</option>
+                  <option value="g05">G05 (2018–н.в.)</option>
+                  <option value="f15">F15 (2013–2018)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="engine">Двигатель</label>
+                <select id="engine" name="engine">
+                  <option value="">Выберите двигатель</option>
+                  <option value="30d">3.0d 265 л.с.</option>
+                  <option value="40i">3.0i 340 л.с.</option>
+                  <option value="45e">xDrive45e 394 л.с.</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Показать характеристики</button>
+          </form>
+          <div class="selector__brands">
+            <span>Популярные марки:</span>
+            <a href="#" class="brand-chip">Audi</a>
+            <a href="#" class="brand-chip">BMW</a>
+            <a href="#" class="brand-chip">Mercedes</a>
+            <a href="#" class="brand-chip">VW</a>
+            <a href="#" class="brand-chip">Toyota</a>
+            <a href="#" class="brand-chip">Ford</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__tag">Услуги</span>
+          <h2 class="section__title">Наши услуги</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Чип-тюнинг Stage 1</h3>
+            <p>Оптимизация заводской прошивки без механических доработок. Безопасный прирост мощности и крутящего момента.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3>Stage 2</h3>
+            <p>Расширенная калибровка с учётом доработок выхлопной системы и интеркулера.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Euro 2</h3>
+            <p>Перевод на стандарт Euro 2 с отключением экологических ограничений.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Отключение EGR</h3>
+            <p>Программное отключение клапана рециркуляции отработавших газов.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            </div>
+            <h3>Удаление DPF</h3>
+            <p>Отключение сажевого фильтра и корректировка прошивки.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+            </div>
+            <h3>Отключение AdBlue</h3>
+            <p>Деактивация системы SCR и корректная работа двигателя.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h3>Удаление катализатора</h3>
+            <p>Адаптация ЭБУ после удаления каталитического нейтрализатора.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <h3>Чип АКПП</h3>
+            <p>Оптимизация коробки передач: быстрее переключения, комфорт в городе.</p>
+            <a href="#" class="service-card__link">Подробнее →</a>
+          </article>
+          <article class="service-card glass service-card--accent">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3>Диагностика</h3>
+            <p>Компьютерная диагностика всех систем автомобиля. Бесплатно при заказе чип-тюнинга.</p>
+            <a href="#" class="service-card__link">Записаться →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="section advantages" id="advantages">
+      <div class="container">
+        <div class="advantages__layout">
+          <div class="advantages__intro">
+            <span class="section__tag">Преимущества</span>
+            <h2 class="section__title">Почему выбирают нас</h2>
+            <p class="section__desc">Более 12 лет опыта, сертифицированные калибровщики и индивидуальный подход к каждому автомобилю.</p>
+            <div class="advantages__counter">
+              <span class="advantages__counter-num">3200+</span>
+              <span class="advantages__counter-text">автомобилей прошито</span>
+            </div>
+          </div>
+          <div class="advantages__grid">
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">01</div>
+              <h3>Лицензированное оборудование</h3>
+              <p>Работаем на оригинальных программаторах Alientech, Autotuner, CMD.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">02</div>
+              <h3>Опыт более 12 лет</h3>
+              <p>Команда инженеров с опытом калибровки всех типов двигателей.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">03</div>
+              <h3>Гарантия</h3>
+              <p>Официальная гарантия на все виды работ и прошивок.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">04</div>
+              <h3>Безопасные прошивки</h3>
+              <p>Каждая калибровка тестируется на стенде и проверяется на дороге.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">05</div>
+              <h3>Бесплатная диагностика</h3>
+              <p>Полная компьютерная диагностика перед началом работ.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">06</div>
+              <h3>Тест-драйв</h3>
+              <p>Контрольный заезд после прошивки для подтверждения результата.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">07</div>
+              <h3>Сертифицированные калибровки</h3>
+              <p>Используем проверенные файлы от ведущих европейских тюнеров.</p>
+            </div>
+            <div class="advantage-item glass">
+              <div class="advantage-item__num">08</div>
+              <h3>3200+ автомобилей</h3>
+              <p>Огромная база успешных прошивок для всех популярных марок.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__tag">Процесс</span>
+          <h2 class="section__title">Как проходит работа</h2>
+        </div>
+        <div class="process__track">
+          <div class="process__line"></div>
+          <div class="process__steps">
+            <article class="process-card glass">
+              <div class="process-card__num">1</div>
+              <h3>Диагностика</h3>
+              <p>Подключаем авто к диагностическому оборудованию, проверяем все системы.</p>
+            </article>
+            <article class="process-card glass">
+              <div class="process-card__num">2</div>
+              <h3>Считывание прошивки</h3>
+              <p>Создаём резервную копию заводской прошивки ЭБУ.</p>
+            </article>
+            <article class="process-card glass">
+              <div class="process-card__num">3</div>
+              <h3>Анализ</h3>
+              <p>Изучаем карты двигателя и подбираем оптимальную калибровку.</p>
+            </article>
+            <article class="process-card glass">
+              <div class="process-card__num">4</div>
+              <h3>Калибровка</h3>
+              <p>Записываем индивидуальную прошивку с учётом состояния авто.</p>
+            </article>
+            <article class="process-card glass">
+              <div class="process-card__num">5</div>
+              <h3>Запись</h3>
+              <p>Прошиваем ЭБУ и проводим адаптацию всех систем.</p>
+            </article>
+            <article class="process-card glass">
+              <div class="process-card__num">6</div>
+              <h3>Тест-драйв</h3>
+              <p>Контрольный заезд и финальная проверка всех параметров.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section class="section works" id="works">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Портфолио</span>
+          <h2 class="section__title">Примеры работ</h2>
+        </div>
+        <div class="works__grid">
+          <article class="work-card">
+            <div class="work-card__img work-card__img--1">
+              <span class="work-card__badge">Stage 1</span>
+            </div>
+            <div class="work-card__body">
+              <h3>BMW X5 30d — прирост +68 л.с.</h3>
+              <div class="work-card__meta">
+                <span>BMW</span>
+                <span>15.06.2025</span>
+              </div>
+              <a href="#" class="btn btn--outline btn--sm">Подробнее</a>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-card__img work-card__img--2">
+              <span class="work-card__badge">Stage 2</span>
+            </div>
+            <div class="work-card__body">
+              <h3>Audi RS6 C8 — 750 л.с.</h3>
+              <div class="work-card__meta">
+                <span>Audi</span>
+                <span>02.06.2025</span>
+              </div>
+              <a href="#" class="btn btn--outline btn--sm">Подробнее</a>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-card__img work-card__img--3">
+              <span class="work-card__badge">Stage 1</span>
+            </div>
+            <div class="work-card__body">
+              <h3>Mercedes GLE 400d — +55 л.с.</h3>
+              <div class="work-card__meta">
+                <span>Mercedes</span>
+                <span>28.05.2025</span>
+              </div>
+              <a href="#" class="btn btn--outline btn--sm">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section video-section" id="video">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__tag">Видео</span>
+          <h2 class="section__title">Наши работы на видео</h2>
+        </div>
+        <div class="video-slider">
+          <div class="video-slider__track">
+            <div class="video-card glass">
+              <div class="video-card__thumb video-card__thumb--1">
+                <div class="video-card__play">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                </div>
+              </div>
+              <h3>BMW X5M — замер разгона 0-100</h3>
+            </div>
+            <div class="video-card glass">
+              <div class="video-card__thumb video-card__thumb--2">
+                <div class="video-card__play">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                </div>
+              </div>
+              <h3>Процесс чип-тюнинга Audi A6</h3>
+            </div>
+            <div class="video-card glass">
+              <div class="video-card__thumb video-card__thumb--3">
+                <div class="video-card__play">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+                </div>
+              </div>
+              <h3>Отзыв клиента — VW Tiguan 2.0 TDI</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__tag">Отзывы</span>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+        <div class="reviews__grid">
+          <article class="review-card glass">
+            <div class="review-card__header">
+              <div class="review-card__avatar">АК</div>
+              <div>
+                <h3 class="review-card__name">Алексей К.</h3>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">Прошивал BMW X3 20d. Прирост ощутимый — машина стала заметно бодрее, расход даже чуть снизился. Всё объяснили, показали замеры до и после. Рекомендую!</p>
+          </article>
+          <article class="review-card glass">
+            <div class="review-card__header">
+              <div class="review-card__avatar">МС</div>
+              <div>
+                <h3 class="review-card__name">Михаил С.</h3>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">Делал Stage 1 на Mercedes E220d. Профессиональный подход, чистый бокс, всё по времени. Тест-драйв после прошивки — отдельный плюс. Очень доволен результатом.</p>
+          </article>
+          <article class="review-card glass">
+            <div class="review-card__header">
+              <div class="review-card__avatar">ДВ</div>
+              <div>
+                <h3 class="review-card__name">Дмитрий В.</h3>
+                <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">Обратился за удалением DPF и чип-тюнингом на VW Passat. Ребята знают своё дело — машина едет как новая, никаких ошибок. Цена адекватная, гарантия есть.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <span class="section__tag">FAQ</span>
+            <h2 class="section__title">Частые вопросы</h2>
+            <p class="section__desc">Ответы на популярные вопросы о чип-тюнинге. Не нашли ответ? Свяжитесь с нами.</p>
+          </div>
+          <div class="faq__list">
+            <details class="faq-item glass">
+              <summary>Безопасен ли чип-тюнинг для двигателя?</summary>
+              <p>При профессиональном подходе чип-тюнинг абсолютно безопасен. Мы работаем в пределах заводских допусков двигателя и трансмиссии, не выходя за критические параметры.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Сколько времени занимает прошивка?</summary>
+              <p>Стандартная прошивка Stage 1 занимает 2–4 часа в зависимости от марки и модели автомобиля. Более сложные работы могут занять до одного рабочего дня.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Сохранится ли гарантия дилера?</summary>
+              <p>Заводская гарантия может быть аннулирована дилером при обнаружении вмешательства в ЭБУ. Мы предоставляем собственную гарантию на все виды работ.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Можно ли вернуть заводскую прошивку?</summary>
+              <p>Да, мы всегда сохраняем оригинальную прошивку и можем восстановить её в любой момент по вашему запросу.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Какой прирост мощности реально получить?</summary>
+              <p>На турбодвигателях прирост составляет 20–35% мощности и 25–40% крутящего момента. На атмосферных двигателях — 5–10%.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__tag">Контакты</span>
+          <h2 class="section__title">Свяжитесь с нами</h2>
+        </div>
+        <div class="contacts__layout">
+          <div class="contacts__info">
+            <div class="contacts__map glass">
+              <div class="contacts__map-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Санкт-Петербург, ул. Автомобильная, 15</span>
+              </div>
+            </div>
+            <ul class="contacts__list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong>Адрес</strong>
+                  <span>г. Санкт-Петербург, ул. Автомобильная, 15</span>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <div>
+                  <strong>Телефон</strong>
+                  <a href="tel:+78121234567">+7 (812) 123-45-67</a>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/78121234567">Написать в WhatsApp</a>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <div>
+                  <strong>Telegram</strong>
+                  <a href="https://t.me/veloxchip">@veloxchip</a>
+                </div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:info@veloxchip.ru">info@veloxchip.ru</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <form class="contacts__form glass" action="#" method="post">
+            <h3>Форма обратной связи</h3>
+            <div class="form-group">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form-group">
+              <label for="car">Автомобиль</label>
+              <input type="text" id="car" name="car" placeholder="BMW X5 30d">
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="4" placeholder="Опишите ваш запрос..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="logo">
+            <span class="logo__mark">V</span>
+            <span class="logo__text">Velox<em>Chip</em></span>
+          </a>
+          <p>Профессиональный чип-тюнинг автомобилей в Санкт-Петербурге. Безопасные прошивки, гарантия качества.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="VK"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.84-1.24-.95-1.45-.95-.3 0-.38.08-.38.5v1.32c0 .36-.12.58-1.08.58-1.6 0-3.37-.97-4.62-2.77-1.88-2.66-2.4-4.66-2.4-4.8 0-.21.08-.4.5-.4h1.46c.38 0 .52.17.67.57.73 2.12 1.96 3.97 2.46 3.97.19 0 .27-.08.27-.54V9.96c-.06-.95-.55-1.02-.55-1.42 0-.17.14-.33.36-.33h2.3c.3 0 .4.15.4.5v2.7c0 .3.13.4.22.4.19 0 .34-.12.68-.46 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.4.65-.4h1.46c.44 0 .53.23.44.57-.18.84-1.93 3.15-1.93 3.15-.15.25-.21.36 0 .65.15.21.65.64 1 1.04.62.74 1.1 1.36 1.23 1.79.14.42-.08.64-.5.64z"/></svg></a>
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31.3 31.3 0 000 12a31.3 31.3 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31.3 31.3 0 0024 12a31.3 31.3 0 00-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Чип-тюнинг Stage 1</a></li>
+            <li><a href="#">Stage 2</a></li>
+            <li><a href="#">Удаление DPF</a></li>
+            <li><a href="#">Отключение EGR</a></li>
+            <li><a href="#">Чип АКПП</a></li>
+            <li><a href="#">Диагностика</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Марки</h4>
+          <ul>
+            <li><a href="#">Audi</a></li>
+            <li><a href="#">BMW</a></li>
+            <li><a href="#">Mercedes-Benz</a></li>
+            <li><a href="#">Volkswagen</a></li>
+            <li><a href="#">Toyota</a></li>
+            <li><a href="#">Ford</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <ul>
+            <li><a href="tel:+78121234567">+7 (812) 123-45-67</a></li>
+            <li><a href="mailto:info@veloxchip.ru">info@veloxchip.ru</a></li>
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 VeloxChip. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "VeloxChip",
+    "description": "Профессиональный чип-тюнинг автомобилей в Санкт-Петербурге",
+    "url": "https://veloxchip.ru",
+    "telephone": "+78121234567",
+    "email": "info@veloxchip.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Автомобильная, 15",
+      "addressLocality": "Санкт-Петербург",
+      "addressCountry": "RU"
+    },
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "priceRange": "$$"
+  }
+  </script>
+
+</body>
+</html>
